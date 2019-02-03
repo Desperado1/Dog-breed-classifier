@@ -13386,7 +13386,7 @@ human faces percentage in dog_files : 18 %
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### (Optional) </span>
@@ -13412,7 +13412,7 @@ human faces percentage in dog_files : 18 %
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[30]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">torch</span>
@@ -13472,7 +13472,7 @@ human faces percentage in dog_files : 18 %
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[40]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="k">import</span> <span class="n">Image</span>
@@ -13489,7 +13489,7 @@ human faces percentage in dog_files : 18 %
 <span class="sd">        Index corresponding to VGG-16 model&#39;s prediction</span>
 <span class="sd">    &#39;&#39;&#39;</span>
     <span class="n">img</span> <span class="o">=</span> <span class="n">Image</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="n">img_path</span><span class="p">)</span>
-    <span class="n">data_transform</span> <span class="o">=</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span><span class="n">transforms</span><span class="o">.</span><span class="n">RandomResizedCrop</span><span class="p">(</span><span class="mi">224</span><span class="p">),</span>
+    <span class="n">data_transform</span> <span class="o">=</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span><span class="n">transforms</span><span class="o">.</span><span class="n">Resize</span><span class="p">((</span><span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">)),</span>
                                         <span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span>
                                         <span class="n">transforms</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="p">[</span><span class="mf">0.485</span><span class="p">,</span> <span class="mf">0.456</span><span class="p">,</span> <span class="mf">0.406</span><span class="p">],</span> <span class="n">std</span><span class="o">=</span><span class="p">[</span><span class="mf">0.229</span><span class="p">,</span> <span class="mf">0.224</span><span class="p">,</span> <span class="mf">0.225</span><span class="p">])])</span>
     <span class="n">img</span> <span class="o">=</span> <span class="n">data_transform</span><span class="p">(</span><span class="n">img</span><span class="p">)</span>
@@ -13520,7 +13520,7 @@ human faces percentage in dog_files : 18 %
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[22]:</div>
+<div class="prompt input_prompt">In&nbsp;[41]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### returns &quot;True&quot; if a dog is detected in the image stored at img_path</span>
@@ -13556,19 +13556,15 @@ human faces percentage in dog_files : 18 %
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<ol>
-<li><p>dog face percentage in human_files_short =  1 %</p>
-</li>
-<li><p>dog face percentage in dog_files_short =  91 %</p>
-</li>
-</ol>
+<p>dog face percentage in human_files_short =  0 %</p>
+<p>dog face percentage in dog_files_short =  95 %</p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[42]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### TODO: Test the performance of the dog_detector function</span>
@@ -13599,8 +13595,8 @@ human faces percentage in dog_files : 18 %
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>dog face percentage in human_files_short =  1 %
-dog face percentage in dog_files_short =  90 %
+<pre>dog face percentage in human_files_short =  0 %
+dog face percentage in dog_files_short =  95 %
 </pre>
 </div>
 </div>
@@ -13676,7 +13672,7 @@ dog face percentage in dog_files_short =  90 %
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[51]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">os</span>
@@ -13693,7 +13689,9 @@ dog face percentage in dog_files_short =  90 %
                                      <span class="n">transforms</span><span class="o">.</span><span class="n">RandomHorizontalFlip</span><span class="p">(),</span>
                                      <span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span>
                                      <span class="n">transforms</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="p">[</span><span class="mf">0.485</span><span class="p">,</span> <span class="mf">0.456</span><span class="p">,</span> <span class="mf">0.406</span><span class="p">],</span> <span class="n">std</span><span class="o">=</span><span class="p">[</span><span class="mf">0.229</span><span class="p">,</span> <span class="mf">0.224</span><span class="p">,</span> <span class="mf">0.225</span><span class="p">])])</span>
-
+<span class="n">data_transform1</span> <span class="o">=</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span><span class="n">transforms</span><span class="o">.</span><span class="n">Resize</span><span class="p">((</span><span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">)),</span>
+                                     <span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span>
+                                     <span class="n">transforms</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="p">[</span><span class="mf">0.485</span><span class="p">,</span> <span class="mf">0.456</span><span class="p">,</span> <span class="mf">0.406</span><span class="p">],</span> <span class="n">std</span><span class="o">=</span><span class="p">[</span><span class="mf">0.229</span><span class="p">,</span> <span class="mf">0.224</span><span class="p">,</span> <span class="mf">0.225</span><span class="p">])])</span>
 <span class="c1"># specifying directories of data</span>
 <span class="n">train_dir</span> <span class="o">=</span> <span class="s1">&#39;D:/himanshu gurjar/deep-learning-v2-pytorch/project-dog-classification/dogImages/train&#39;</span>
 <span class="n">valid_dir</span> <span class="o">=</span> <span class="s1">&#39;D:/himanshu gurjar/deep-learning-v2-pytorch/project-dog-classification/dogImages/valid&#39;</span>
@@ -13701,8 +13699,8 @@ dog face percentage in dog_files_short =  90 %
 
 <span class="c1"># loading and transforming data</span>
 <span class="n">train_data</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">ImageFolder</span><span class="p">(</span><span class="n">train_dir</span><span class="p">,</span> <span class="n">transform</span> <span class="o">=</span> <span class="n">data_transform</span><span class="p">)</span>
-<span class="n">valid_data</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">ImageFolder</span><span class="p">(</span><span class="n">valid_dir</span><span class="p">,</span> <span class="n">transform</span> <span class="o">=</span> <span class="n">data_transform</span><span class="p">)</span>
-<span class="n">test_data</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">ImageFolder</span><span class="p">(</span><span class="n">test_dir</span><span class="p">,</span> <span class="n">transform</span> <span class="o">=</span> <span class="n">data_transform</span><span class="p">)</span>
+<span class="n">valid_data</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">ImageFolder</span><span class="p">(</span><span class="n">valid_dir</span><span class="p">,</span> <span class="n">transform</span> <span class="o">=</span> <span class="n">data_transform1</span><span class="p">)</span>
+<span class="n">test_data</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">ImageFolder</span><span class="p">(</span><span class="n">test_dir</span><span class="p">,</span> <span class="n">transform</span> <span class="o">=</span> <span class="n">data_transform1</span><span class="p">)</span>
 <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">num_workers</span> <span class="o">=</span> <span class="mi">0</span>
 
@@ -13760,7 +13758,7 @@ dog face percentage in dog_files_short =  90 %
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[52]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">torch.nn</span> <span class="k">as</span> <span class="nn">nn</span>
@@ -13878,7 +13876,7 @@ dog face percentage in dog_files_short =  90 %
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[32]:</div>
+<div class="prompt input_prompt">In&nbsp;[53]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">torch.optim</span> <span class="k">as</span> <span class="nn">optim</span>
@@ -13905,7 +13903,7 @@ dog face percentage in dog_files_short =  90 %
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[33]:</div>
+<div class="prompt input_prompt">In&nbsp;[54]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="k">import</span> <span class="n">ImageFile</span>
@@ -13977,7 +13975,7 @@ dog face percentage in dog_files_short =  90 %
 
 <span class="c1"># train the model</span>
 
-<span class="n">model_scratch</span> <span class="o">=</span> <span class="n">train</span><span class="p">(</span><span class="mi">20</span><span class="p">,</span> <span class="n">loaders_scratch</span><span class="p">,</span> <span class="n">model_scratch</span><span class="p">,</span> <span class="n">optimizer_scratch</span><span class="p">,</span> 
+<span class="n">model_scratch</span> <span class="o">=</span> <span class="n">train</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="n">loaders_scratch</span><span class="p">,</span> <span class="n">model_scratch</span><span class="p">,</span> <span class="n">optimizer_scratch</span><span class="p">,</span> 
                       <span class="n">criterion_scratch</span><span class="p">,</span> <span class="n">use_cuda</span><span class="p">,</span> <span class="s1">&#39;model_scratch1.pt&#39;</span><span class="p">)</span>
 
 <span class="c1"># load the model that got the best validation accuracy</span>
@@ -13998,40 +13996,31 @@ dog face percentage in dog_files_short =  90 %
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch: 1 	Training Loss: 4.840129 	Validation Loss: 4.786722
-Validation loss decreased (inf --&gt; 4.786722).  Saving model ...
-Epoch: 2 	Training Loss: 4.692881 	Validation Loss: 4.638523
-Validation loss decreased (4.786722 --&gt; 4.638523).  Saving model ...
-Epoch: 3 	Training Loss: 4.591486 	Validation Loss: 4.565765
-Validation loss decreased (4.638523 --&gt; 4.565765).  Saving model ...
-Epoch: 4 	Training Loss: 4.517030 	Validation Loss: 4.609696
-Epoch: 5 	Training Loss: 4.467550 	Validation Loss: 4.449582
-Validation loss decreased (4.565765 --&gt; 4.449582).  Saving model ...
-Epoch: 6 	Training Loss: 4.382228 	Validation Loss: 4.361800
-Validation loss decreased (4.449582 --&gt; 4.361800).  Saving model ...
-Epoch: 7 	Training Loss: 4.306254 	Validation Loss: 4.288871
-Validation loss decreased (4.361800 --&gt; 4.288871).  Saving model ...
-Epoch: 8 	Training Loss: 4.263499 	Validation Loss: 4.273159
-Validation loss decreased (4.288871 --&gt; 4.273159).  Saving model ...
-Epoch: 9 	Training Loss: 4.196755 	Validation Loss: 4.237555
-Validation loss decreased (4.273159 --&gt; 4.237555).  Saving model ...
-Epoch: 10 	Training Loss: 4.142582 	Validation Loss: 4.173258
-Validation loss decreased (4.237555 --&gt; 4.173258).  Saving model ...
-Epoch: 11 	Training Loss: 4.088893 	Validation Loss: 4.202223
-Epoch: 12 	Training Loss: 4.035600 	Validation Loss: 4.150383
-Validation loss decreased (4.173258 --&gt; 4.150383).  Saving model ...
-Epoch: 13 	Training Loss: 4.003821 	Validation Loss: 4.072906
-Validation loss decreased (4.150383 --&gt; 4.072906).  Saving model ...
-Epoch: 14 	Training Loss: 3.945196 	Validation Loss: 4.075750
-Epoch: 15 	Training Loss: 3.904918 	Validation Loss: 4.001261
-Validation loss decreased (4.072906 --&gt; 4.001261).  Saving model ...
-Epoch: 16 	Training Loss: 3.833399 	Validation Loss: 3.914825
-Validation loss decreased (4.001261 --&gt; 3.914825).  Saving model ...
-Epoch: 17 	Training Loss: 3.821430 	Validation Loss: 3.940185
-Epoch: 18 	Training Loss: 3.774957 	Validation Loss: 3.938153
-Epoch: 19 	Training Loss: 3.715476 	Validation Loss: 3.821553
-Validation loss decreased (3.914825 --&gt; 3.821553).  Saving model ...
-Epoch: 20 	Training Loss: 3.709702 	Validation Loss: 3.895678
+<pre>Epoch: 1 	Training Loss: 4.855907 	Validation Loss: 4.779546
+Validation loss decreased (inf --&gt; 4.779546).  Saving model ...
+Epoch: 2 	Training Loss: 4.698526 	Validation Loss: 4.584862
+Validation loss decreased (4.779546 --&gt; 4.584862).  Saving model ...
+Epoch: 3 	Training Loss: 4.591659 	Validation Loss: 4.442982
+Validation loss decreased (4.584862 --&gt; 4.442982).  Saving model ...
+Epoch: 4 	Training Loss: 4.519476 	Validation Loss: 4.465392
+Epoch: 5 	Training Loss: 4.456713 	Validation Loss: 4.325957
+Validation loss decreased (4.442982 --&gt; 4.325957).  Saving model ...
+Epoch: 6 	Training Loss: 4.396232 	Validation Loss: 4.343730
+Epoch: 7 	Training Loss: 4.330751 	Validation Loss: 4.181404
+Validation loss decreased (4.325957 --&gt; 4.181404).  Saving model ...
+Epoch: 8 	Training Loss: 4.262681 	Validation Loss: 4.101255
+Validation loss decreased (4.181404 --&gt; 4.101255).  Saving model ...
+Epoch: 9 	Training Loss: 4.209480 	Validation Loss: 4.078555
+Validation loss decreased (4.101255 --&gt; 4.078555).  Saving model ...
+Epoch: 10 	Training Loss: 4.144279 	Validation Loss: 4.021599
+Validation loss decreased (4.078555 --&gt; 4.021599).  Saving model ...
+Epoch: 11 	Training Loss: 4.078707 	Validation Loss: 4.046386
+Epoch: 12 	Training Loss: 4.042083 	Validation Loss: 4.025122
+Epoch: 13 	Training Loss: 3.987025 	Validation Loss: 3.881771
+Validation loss decreased (4.021599 --&gt; 3.881771).  Saving model ...
+Epoch: 14 	Training Loss: 3.940234 	Validation Loss: 3.829078
+Validation loss decreased (3.881771 --&gt; 3.829078).  Saving model ...
+Epoch: 15 	Training Loss: 3.894672 	Validation Loss: 3.844887
 </pre>
 </div>
 </div>
@@ -14050,7 +14039,7 @@ Epoch: 20 	Training Loss: 3.709702 	Validation Loss: 3.895678
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[34]:</div>
+<div class="prompt input_prompt">In&nbsp;[55]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="k">def</span> <span class="nf">test</span><span class="p">(</span><span class="n">loaders</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">criterion</span><span class="p">,</span> <span class="n">use_cuda</span><span class="p">):</span>
@@ -14100,10 +14089,10 @@ Epoch: 20 	Training Loss: 3.709702 	Validation Loss: 3.895678
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Test Loss: 3.865413
+<pre>Test Loss: 3.855705
 
 
-Test Accuracy: 11% (99/836)
+Test Accuracy: 11% (93/836)
 </pre>
 </div>
 </div>
@@ -14126,7 +14115,7 @@ Test Accuracy: 11% (99/836)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[35]:</div>
+<div class="prompt input_prompt">In&nbsp;[56]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## TODO: Specify data loaders</span>
@@ -14142,7 +14131,9 @@ Test Accuracy: 11% (99/836)
                                      <span class="n">transforms</span><span class="o">.</span><span class="n">RandomHorizontalFlip</span><span class="p">(),</span>
                                      <span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span>
                                      <span class="n">transforms</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="p">[</span><span class="mf">0.485</span><span class="p">,</span> <span class="mf">0.456</span><span class="p">,</span> <span class="mf">0.406</span><span class="p">],</span> <span class="n">std</span><span class="o">=</span><span class="p">[</span><span class="mf">0.229</span><span class="p">,</span> <span class="mf">0.224</span><span class="p">,</span> <span class="mf">0.225</span><span class="p">])])</span>
-
+<span class="n">data_transform1</span> <span class="o">=</span> <span class="n">transforms</span><span class="o">.</span><span class="n">Compose</span><span class="p">([</span><span class="n">transforms</span><span class="o">.</span><span class="n">Resize</span><span class="p">((</span><span class="mi">224</span><span class="p">,</span> <span class="mi">224</span><span class="p">)),</span>
+                                     <span class="n">transforms</span><span class="o">.</span><span class="n">ToTensor</span><span class="p">(),</span>
+                                     <span class="n">transforms</span><span class="o">.</span><span class="n">Normalize</span><span class="p">(</span><span class="n">mean</span><span class="o">=</span><span class="p">[</span><span class="mf">0.485</span><span class="p">,</span> <span class="mf">0.456</span><span class="p">,</span> <span class="mf">0.406</span><span class="p">],</span> <span class="n">std</span><span class="o">=</span><span class="p">[</span><span class="mf">0.229</span><span class="p">,</span> <span class="mf">0.224</span><span class="p">,</span> <span class="mf">0.225</span><span class="p">])])</span>
 <span class="c1"># specifying directories of data</span>
 <span class="n">train_dir</span> <span class="o">=</span> <span class="s1">&#39;D:/himanshu gurjar/deep-learning-v2-pytorch/project-dog-classification/dogImages/train&#39;</span>
 <span class="n">valid_dir</span> <span class="o">=</span> <span class="s1">&#39;D:/himanshu gurjar/deep-learning-v2-pytorch/project-dog-classification/dogImages/valid&#39;</span>
@@ -14150,8 +14141,8 @@ Test Accuracy: 11% (99/836)
 
 <span class="c1"># loading and transforming data</span>
 <span class="n">train_data</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">ImageFolder</span><span class="p">(</span><span class="n">train_dir</span><span class="p">,</span> <span class="n">transform</span> <span class="o">=</span> <span class="n">data_transform</span><span class="p">)</span>
-<span class="n">valid_data</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">ImageFolder</span><span class="p">(</span><span class="n">valid_dir</span><span class="p">,</span> <span class="n">transform</span> <span class="o">=</span> <span class="n">data_transform</span><span class="p">)</span>
-<span class="n">test_data</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">ImageFolder</span><span class="p">(</span><span class="n">test_dir</span><span class="p">,</span> <span class="n">transform</span> <span class="o">=</span> <span class="n">data_transform</span><span class="p">)</span>
+<span class="n">valid_data</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">ImageFolder</span><span class="p">(</span><span class="n">valid_dir</span><span class="p">,</span> <span class="n">transform</span> <span class="o">=</span> <span class="n">data_transform1</span><span class="p">)</span>
+<span class="n">test_data</span> <span class="o">=</span> <span class="n">datasets</span><span class="o">.</span><span class="n">ImageFolder</span><span class="p">(</span><span class="n">test_dir</span><span class="p">,</span> <span class="n">transform</span> <span class="o">=</span> <span class="n">data_transform1</span><span class="p">)</span>
 <span class="n">batch_size</span> <span class="o">=</span> <span class="mi">10</span>
 <span class="n">num_workers</span> <span class="o">=</span> <span class="mi">0</span>
 
@@ -14183,7 +14174,7 @@ Test Accuracy: 11% (99/836)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[36]:</div>
+<div class="prompt input_prompt">In&nbsp;[57]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">torchvision.models</span> <span class="k">as</span> <span class="nn">models</span>
@@ -14417,7 +14408,7 @@ Test Accuracy: 11% (99/836)
 </div><div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
-<p>i have selected resnet50 as it performs well on image classification.
+<p>i have selected resnet50 as it performs well on image classification. The core idea of ResNet is introducing a so-called “identity shortcut connection” that skips one or more layers. I guess this prevents overfitting.
 I've pull out the final Fully-connected layer and replaced with Fully-connected layer with output of 133 i.e. the no of dog breeds.</p>
 
 </div>
@@ -14433,7 +14424,7 @@ I've pull out the final Fully-connected layer and replaced with Fully-connected 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[37]:</div>
+<div class="prompt input_prompt">In&nbsp;[58]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">import</span> <span class="nn">torch.optim</span> <span class="k">as</span> <span class="nn">optim</span>
@@ -14456,7 +14447,7 @@ I've pull out the final Fully-connected layer and replaced with Fully-connected 
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[39]:</div>
+<div class="prompt input_prompt">In&nbsp;[61]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">PIL</span> <span class="k">import</span> <span class="n">ImageFile</span>
@@ -14529,7 +14520,7 @@ I've pull out the final Fully-connected layer and replaced with Fully-connected 
 <span class="c1"># train the model</span>
 
 <span class="c1"># train the model</span>
-<span class="n">model_transfer</span> <span class="o">=</span> <span class="n">train</span><span class="p">(</span><span class="mi">15</span><span class="p">,</span> <span class="n">loaders_transfer</span><span class="p">,</span> <span class="n">model_transfer</span><span class="p">,</span> <span class="n">optimizer_transfer</span><span class="p">,</span> <span class="n">criterion_transfer</span><span class="p">,</span> <span class="n">use_cuda</span><span class="p">,</span> <span class="s1">&#39;model_transfer.pt&#39;</span><span class="p">)</span>
+<span class="n">model_transfer</span> <span class="o">=</span> <span class="n">train</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="n">loaders_transfer</span><span class="p">,</span> <span class="n">model_transfer</span><span class="p">,</span> <span class="n">optimizer_transfer</span><span class="p">,</span> <span class="n">criterion_transfer</span><span class="p">,</span> <span class="n">use_cuda</span><span class="p">,</span> <span class="s1">&#39;model_transfer.pt&#39;</span><span class="p">)</span>
 
 <span class="c1"># load the model that got the best validation accuracy (uncomment the line below)</span>
 <span class="n">model_transfer</span><span class="o">.</span><span class="n">load_state_dict</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="s1">&#39;model_transfer.pt&#39;</span><span class="p">))</span>
@@ -14549,24 +14540,14 @@ I've pull out the final Fully-connected layer and replaced with Fully-connected 
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Epoch: 1 	Training Loss: 2.057470 	Validation Loss: 3.814712
-Validation loss decreased (inf --&gt; 3.814712).  Saving model ...
-Epoch: 2 	Training Loss: 1.564876 	Validation Loss: 3.826195
-Epoch: 3 	Training Loss: 1.395141 	Validation Loss: 3.865594
-Epoch: 4 	Training Loss: 1.335345 	Validation Loss: 3.839656
-Epoch: 5 	Training Loss: 1.261695 	Validation Loss: 3.810994
-Validation loss decreased (3.814712 --&gt; 3.810994).  Saving model ...
-Epoch: 6 	Training Loss: 1.278030 	Validation Loss: 3.849488
-Epoch: 7 	Training Loss: 1.224578 	Validation Loss: 3.828111
-Epoch: 8 	Training Loss: 1.215097 	Validation Loss: 3.812162
-Epoch: 9 	Training Loss: 1.189863 	Validation Loss: 3.896349
-Epoch: 10 	Training Loss: 1.160886 	Validation Loss: 3.889074
-Epoch: 11 	Training Loss: 1.146673 	Validation Loss: 3.865510
-Epoch: 12 	Training Loss: 1.163659 	Validation Loss: 3.804607
-Validation loss decreased (3.810994 --&gt; 3.804607).  Saving model ...
-Epoch: 13 	Training Loss: 1.143045 	Validation Loss: 3.858626
-Epoch: 14 	Training Loss: 1.148769 	Validation Loss: 3.885725
-Epoch: 15 	Training Loss: 1.077749 	Validation Loss: 3.889559
+<pre>Epoch: 1 	Training Loss: 1.101839 	Validation Loss: 3.830906
+Validation loss decreased (inf --&gt; 3.830906).  Saving model ...
+Epoch: 2 	Training Loss: 1.116230 	Validation Loss: 3.831625
+Epoch: 3 	Training Loss: 1.110752 	Validation Loss: 3.831509
+Epoch: 4 	Training Loss: 1.061261 	Validation Loss: 3.829970
+Validation loss decreased (3.830906 --&gt; 3.829970).  Saving model ...
+Epoch: 5 	Training Loss: 1.092899 	Validation Loss: 3.827135
+Validation loss decreased (3.829970 --&gt; 3.827135).  Saving model ...
 </pre>
 </div>
 </div>
@@ -14585,7 +14566,7 @@ Epoch: 15 	Training Loss: 1.077749 	Validation Loss: 3.889559
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[40]:</div>
+<div class="prompt input_prompt">In&nbsp;[62]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">test</span><span class="p">(</span><span class="n">loaders_transfer</span><span class="p">,</span> <span class="n">model_transfer</span><span class="p">,</span> <span class="n">criterion_transfer</span><span class="p">,</span> <span class="n">use_cuda</span><span class="p">)</span>
@@ -14605,10 +14586,10 @@ Epoch: 15 	Training Loss: 1.077749 	Validation Loss: 3.889559
 
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>Test Loss: 1.094090
+<pre>Test Loss: 0.585494
 
 
-Test Accuracy: 72% (607/836)
+Test Accuracy: 82% (687/836)
 </pre>
 </div>
 </div>
@@ -14627,7 +14608,7 @@ Test Accuracy: 72% (607/836)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[41]:</div>
+<div class="prompt input_prompt">In&nbsp;[63]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### TODO: Write a function that takes a path to an image as input</span>
@@ -14657,7 +14638,7 @@ Test Accuracy: 72% (607/836)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[42]:</div>
+<div class="prompt input_prompt">In&nbsp;[64]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">predition</span> <span class="o">=</span> <span class="n">predict_breed_transfer</span><span class="p">(</span><span class="s1">&#39;D:/himanshu gurjar/deep-learning-v2-pytorch/project-dog-classification/images/Labrador_retriever_06457.jpg&#39;</span><span class="p">)</span>
@@ -14707,7 +14688,7 @@ Test Accuracy: 72% (607/836)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[43]:</div>
+<div class="prompt input_prompt">In&nbsp;[65]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">### TODO: Write your algorithm.</span>
@@ -14752,11 +14733,11 @@ Test Accuracy: 72% (607/836)
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>Answer:</strong></p>
 <ol>
-<li><p>model can be improved by more dataset as for training purpose each dog breed is having very less images.</p>
+<li><p>model can be improved by more dataset as for training purpose each dog breed is having very less images.Image augmentation can be done more by introducing more transformations.</p>
 </li>
-<li><p>Image augmentation can be done more like, flipping the images or croping them etc.</p>
+<li><p>Ensembles of models could be used for much better performance.</p>
 </li>
-<li><p>hyper-parameter tunin such as better weight initialization and learning rate.</p>
+<li><p>hyper-parameter tuning such as better weight initialization, learning rate, batch-size and different optimizers could help in improving performance.</p>
 </li>
 </ol>
 
@@ -14765,7 +14746,7 @@ Test Accuracy: 72% (607/836)
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[44]:</div>
+<div class="prompt input_prompt">In&nbsp;[66]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython3"><pre><span></span><span class="c1">## TODO: Execute your algorithm from Step 6 on</span>
@@ -14834,7 +14815,7 @@ you look like a  Chesapeake bay retriever
 
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>hello human !
-you look like a  Basenji
+you look like a  Brittany
 </pre>
 </div>
 </div>
